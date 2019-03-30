@@ -1,5 +1,6 @@
 {
-  "private": true,
+  "name": "clever-babbage",
+  "description": "CBTracker",
   "engines": {
     "node": "10.15.3"
   },
