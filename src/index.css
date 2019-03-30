@@ -31,11 +31,6 @@ body {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-#root {
-  min-height: 100vh;
-  width: 100vw;
-}
-
 .container {
   display: flex;
   flex-direction: column;
@@ -45,7 +40,7 @@ body {
 
 .row {
   flex-direction: row;
-  margin-bottom: 40px;
+  margin-bottom: 100px;
 }
 
 button {
@@ -104,8 +99,10 @@ button {
   color: #dadada;
 }
 
-.question {
-  padding-top: 120px;
+@media (min-width: 900px) {
+  .question {
+    padding-top: 120px;
+  }
 }
 
 .question h1 {
