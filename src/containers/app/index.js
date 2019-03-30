@@ -1,18 +1,17 @@
 import React from 'react'
-import { Route, Link } from 'react-router-dom'
-import Home from '../home'
-import About from '../about'
+import { Route } from 'react-router-dom'
+import Question from '../question'
+import Dashboard from '../dashboard'
+import FriendCalendar from '../friendCalendar'
+import Share from '../share'
 
 const App = () => (
   <div>
-    <header>
-      <Link to="/">Home</Link>
-      <Link to="/about-us">About</Link>
-    </header>
-
     <main>
-      <Route exact path="/" component={Home} />
-      <Route exact path="/about-us" component={About} />
+      <Route exact path="/" component={Question} />
+      <Route exact path="/dashboard" component={Dashboard} />
+      <Route exact path="/add-friend-calendar" component={FriendCalendar} />
+      <Route exact path="/share" component={Share} />
     </main>
   </div>
 )

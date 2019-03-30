@@ -9,9 +9,9 @@ import {
   decrementAsync
 } from '../../modules/counter'
 
-const Home = props => (
+const FriendCalendar = props => (
   <div>
-    <h1>Home</h1>
+    <h1>Enter friend's contact:</h1>
     <p>Count: {props.count}</p>
 
     <p>
@@ -57,4 +57,4 @@ const mapDispatchToProps = dispatch =>
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Home)
+)(FriendCalendar)
