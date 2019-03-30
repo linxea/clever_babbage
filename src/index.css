@@ -14,3 +14,112 @@ body {
 button:disabled {
   opacity: 0.5;
 }
+
+body {
+  color: white;
+  background: #0f2027; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #0d1854,
+    #0f2027
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #0d1854,
+    #0f2027
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#root {
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  padding: 10px;
+}
+
+.row {
+  flex-direction: row;
+}
+
+button {
+  background-color: rgb(236, 77, 127);
+  height: 50px;
+  border-radius: 20px;
+  width: 80%;
+  max-width: 400px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.button-outline {
+  border: 1px solid white;
+  height: 10px;
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 20px;
+  border-radius: 20px;
+}
+
+.input-calendar {
+  height: 30px;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.container-calendar {
+  width: 80%;
+  max-width: 400px;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: white !important;
+  font-size: 1.3rem;
+}
+
+.input-period-length {
+  width: 60px;
+  font-size: 2rem;
+  border-radius: 20px;
+  padding: 0px 10px;
+  text-align: center;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  border: transparent;
+}
+
+.label-day {
+  font-size: 1.8rem;
+  color: #dadada;
+}
+
+.question {
+  padding-top: 100px;
+}
+
+.question h1 {
+  margin-top: 60px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.dashboard,
+.friend-calendar,
+.share-calendar {
+  padding-top: 50px;
+}
+
+.calendar {
+  width: 80%;
+  max-width: 1000px;
+  margin-bottom: 30px;
+}

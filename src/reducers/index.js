@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
-import counter from './counter'
+import period from './period'
 
 export default combineReducers({
-  counter
+  period
 })

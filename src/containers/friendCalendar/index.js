@@ -1,60 +1,29 @@
 import React from 'react'
-import { push } from 'connected-react-router'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import {
-  increment,
-  incrementAsync,
-  decrement,
-  decrementAsync
-} from '../../modules/counter'
+import { fetchCalendarsOfFriends } from '../../actions/period'
 
 const FriendCalendar = props => (
-  <div>
-    <h1>Enter friend's contact:</h1>
-    <p>Count: {props.count}</p>
-
-    <p>
-      <button onClick={props.increment}>Increment</button>
-      <button onClick={props.incrementAsync} disabled={props.isIncrementing}>
-        Increment Async
-      </button>
-    </p>
-
-    <p>
-      <button onClick={props.decrement}>Decrement</button>
-      <button onClick={props.decrementAsync} disabled={props.isDecrementing}>
-        Decrement Async
-      </button>
-    </p>
-
-    <p>
-      <button onClick={() => props.changePage()}>
-        Go to about page via redux
-      </button>
-    </p>
+  <div className="container friend-calendar">
+    <h1>Add Friend's Period Calendar:</h1>
+    <button onClick={e => handleClick(props)}>Add</button>
   </div>
 )
 
-const mapStateToProps = ({ counter }) => ({
-  count: counter.count,
-  isIncrementing: counter.isIncrementing,
-  isDecrementing: counter.isDecrementing
-})
+const handleClick = props => {
+  props.fetchCalendarsOfFriends()
+  props.history.push('/dashboard')
+}
 
 const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
-      increment,
-      incrementAsync,
-      decrement,
-      decrementAsync,
-      changePage: () => push('/about-us')
+      fetchCalendarsOfFriends
     },
     dispatch
   )
 
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps
 )(FriendCalendar)

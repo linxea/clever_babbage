@@ -1,12 +1,45 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import mobiscroll from '@mobiscroll/react'
+import '@mobiscroll/react/dist/css/mobiscroll.min.css'
+import { connect } from 'react-redux'
 
-const Dashboard = () => (
-  <div>
-    <h1>Calendar</h1>
-    <Link to="/share">share</Link>
-    <Link to="/add-friend-calendar">+</Link>
+mobiscroll.settings = {
+  theme: 'ios-dark'
+}
+
+const Dashboard = props => (
+  <div className="container dashboard">
+    <h1>Period Calendar</h1>
+
+    <div className="calendar">
+      <mobiscroll.Form>
+        <mobiscroll.FormGroup>
+          <mobiscroll.FormGroupTitle>Labels</mobiscroll.FormGroupTitle>
+          <mobiscroll.Calendar
+            labels={props.calendarOfFriends} // More info about labels: https://docs.mobiscroll.com/4-6-1/react/calendar#opt-labels
+            display="inline" // Specify display mode like: display="bottom" or omit setting to use default
+            type="hidden"
+          />
+        </mobiscroll.FormGroup>
+      </mobiscroll.Form>
+    </div>
+    <div className="row">
+      <Link className="button-outline" to="/share-calendar">
+        Share
+      </Link>
+      <Link className="button-outline" to="/add-friend-calendar">
+        +
+      </Link>
+    </div>
   </div>
 )
 
-export default Dashboard
+const mapStateToProps = ({ period }) => ({
+  calendarOfFriends: period.calendarOfFriends
+})
+
+export default connect(
+  mapStateToProps,
+  null
+)(Dashboard)
