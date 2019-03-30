@@ -2,7 +2,7 @@
 
 ## [MANDATORY] Tagline
 
-A brief one sentence tag line explaining the clear purpose of your project and how it does the job.
+To track period.
 
 ## [MANDATORY] Summary Paragraph
 
