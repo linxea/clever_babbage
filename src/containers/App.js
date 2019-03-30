@@ -1,9 +1,9 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
-import Question from '../Question'
-import Dashboard from '../Dashboard'
-import FriendCalendar from '../FriendCalendar'
-import ShareCalendar from '../ShareCalendar'
+import Question from './Question'
+import Dashboard from './Dashboard'
+import FriendCalendar from './FriendCalendar'
+import ShareCalendar from './ShareCalendar'
 
 const App = () => (
   <div>

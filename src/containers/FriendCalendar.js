@@ -1,7 +1,7 @@
 import React from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { fetchCalendarsOfFriends } from '../../actions/period'
+import { fetchCalendarsOfFriends } from '../actions/period'
 
 const FriendCalendar = props => (
   <div className="container friend-calendar">

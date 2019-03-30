@@ -7,7 +7,7 @@ import {
   setPeriodLength,
   setPeriodStartDate,
   updatePeriodProfile
-} from '../../actions/period'
+} from '../actions/period'
 
 class Question extends React.Component {
   constructor(props) {
