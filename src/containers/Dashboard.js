@@ -15,7 +15,6 @@ const Dashboard = props => (
     <div className="calendar">
       <mobiscroll.Form>
         <mobiscroll.FormGroup>
-          <mobiscroll.FormGroupTitle>Labels</mobiscroll.FormGroupTitle>
           <mobiscroll.Calendar
             labels={props.calendarOfFriends} // More info about labels: https://docs.mobiscroll.com/4-6-1/react/calendar#opt-labels
             display="inline" // Specify display mode like: display="bottom" or omit setting to use default

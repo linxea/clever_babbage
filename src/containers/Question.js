@@ -18,7 +18,7 @@ class Question extends React.Component {
   render() {
     return (
       <div className="container question">
-        <h1>When is your last period?</h1>
+        <h1>When was your last period?</h1>
         <mobiscroll.Form inputStyle="box" className="container-calendar">
           <mobiscroll.Date
             className="input-calendar"
