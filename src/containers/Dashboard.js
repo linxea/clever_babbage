@@ -24,8 +24,11 @@ const Dashboard = props => (
       </mobiscroll.Form>
     </div>
     <div className="row">
+      <Link className="button-outline" to="/settings">
+        Settings
+      </Link>
       <Link className="button-outline" to="/share-calendar">
-        Share
+        Notify
       </Link>
       <Link className="button-outline" to="/add-friend-calendar">
         +
