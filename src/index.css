@@ -125,3 +125,7 @@ h1 {
   max-width: 1000px;
   margin-bottom: 30px;
 }
+
+.label-width {
+  padding-right: 100px;
+}
