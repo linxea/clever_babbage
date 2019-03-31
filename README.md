@@ -6,7 +6,9 @@ To track period.
 
 ## [MANDATORY] Summary Paragraph
 
-A one paragraph summary of your project. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a turpis ac ipsum lacinia sollicitudin sit amet et sapien. Vivamus vehicula consectetur convallis. Sed rutrum posuere eros, posuere scelerisque massa molestie ut. Duis orci lorem, congue condimentum pulvinar a, imperdiet sit amet odio. Phasellus condimentum sit amet lorem vitae ultricies. Donec eget rhoncus felis. Sed euismod eleifend varius. Fusce vel eros elit. Aliquam a lorem sit amet dolor mollis pellentesque eu quis ipsum. Fusce placerat imperdiet luctus. Aenean et ante nisi. Nunc mauris magna, tristique in ligula vitae, efficitur mollis nisl.
+An app for the smart BF - for the best friends and the boy friend. 
+Best friends can add their period calendars and plan for the best time to go on a dive trip together. 
+The Boyfriend will be alerted and informed when the girlfriend is not in her best mood.  
 
 ## [MANDATORY] Link to the one page article
 
