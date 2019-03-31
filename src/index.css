@@ -179,3 +179,8 @@ div.ReactTags__selected a.ReactTags__remove {
 .label-width {
   padding-right: 100px;
 }
+
+.mbsc-ios .mbsc-switch input:checked + .mbsc-switch-track {
+  background: #4cd764;
+  border-color: #4cd764;
+}
