@@ -125,3 +125,53 @@ h1 {
   max-width: 1000px;
   margin-bottom: 30px;
 }
+
+input.ReactTags__tagInputField {
+  padding: 10px;
+  border-radius: 5px;
+  height: 50px;
+  width: 100%;
+}
+
+.ReactTags__tags.react-tags-wrapper {
+  width: 80%;
+  max-width: 400px;
+}
+
+/* Styles for suggestions */
+div.ReactTags__suggestions {
+  position: absolute;
+}
+div.ReactTags__suggestions ul {
+  list-style-type: none;
+  box-shadow: 0.05em 0.01em 0.5em rgba(0, 0, 0, 0.2);
+  background: white;
+  width: 200px;
+}
+div.ReactTags__suggestions li {
+  color: black;
+  padding: 5px 10px;
+  margin-top: -10px;
+}
+div.ReactTags__suggestions li mark {
+  background: none;
+}
+div.ReactTags__suggestions ul li.ReactTags__activeSuggestion {
+  cursor: pointer;
+}
+
+/* Styles for selected tags */
+div.ReactTags__selected span.ReactTags__tag {
+  border: 1px solid #ddd;
+  font-size: 1.2rem;
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 10px 5px;
+  cursor: move;
+  border-radius: 5px;
+}
+
+div.ReactTags__selected a.ReactTags__remove {
+  margin-left: 5px;
+  cursor: pointer;
+}

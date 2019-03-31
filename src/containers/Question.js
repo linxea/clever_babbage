@@ -45,7 +45,9 @@ class Question extends React.Component {
           <span className="label-day">Days</span>
         </label>
 
-        <button onClick={this.onClickButton}>Done</button>
+        <button className="button" onClick={this.onClickButton}>
+          Done
+        </button>
       </div>
     )
   }
