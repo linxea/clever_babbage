@@ -12,20 +12,11 @@ The Boyfriend will be alerted and informed when the girlfriend is not in her bes
 
 ## [MANDATORY] Link to the one page article
 
-LINK : https://github.com/linxea/clever_babbage/One-Page-Article.md
+LINK : https://github.com/linxea/clever_babbage/blob/master/One-Page-Article.md
 
-## [OPTIONAL] Additional ressources:
+## [OPTIONAL] Additional resources:
 
-Provide link(s) to additional ressource(s) you created during the 24h hackathon period and pushed in your submission repo.
-
-Anything that can help better appreicate your project is good to do.
-
-Non-exhaustive list of ideas for additional ressources:
-
-- Case studies
-- Detailed analysis of the problem (e.g. cost, number of person impacted, history of the problem)
-- Github Page
-- Video
+Design : https://github.com/linxea/clever_babbage/tree/master/images
 
 ## [MANDATORY] Team Members
 
