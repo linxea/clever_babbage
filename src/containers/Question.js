@@ -24,6 +24,7 @@ class Question extends React.Component {
             className="input-calendar"
             display="bubble"
             placeholder="Start Date"
+            dateFormat="yyyy-mm-dd"
             value={this.props.startDate}
             onSet={this.props.setPeriodStartDate}
           />
@@ -49,10 +50,9 @@ class Question extends React.Component {
     )
   }
 
-  onClickButton(event) {
-    // send to api
-    // redirect to dashboard
+  onClickButton() {
     this.props.updatePeriodProfile()
+    // redirect to dashboard
     this.props.history.push('/dashboard')
   }
 }

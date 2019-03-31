@@ -22,6 +22,7 @@
     "@mobiscroll/react": "https://npm.mobiscroll.com/@mobiscroll/react-trial/-/react-trial-4.6.1.tgz",
     "connected-react-router": "4.5.0",
     "fetch": "^1.1.0",
+    "moment": "^2.24.0",
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "react-redux": "5.1.1",

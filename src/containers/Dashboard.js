@@ -16,7 +16,7 @@ const Dashboard = props => (
       <mobiscroll.Form>
         <mobiscroll.FormGroup>
           <mobiscroll.Calendar
-            labels={props.calendarOfFriends} // More info about labels: https://docs.mobiscroll.com/4-6-1/react/calendar#opt-labels
+            labels={props.calendar} // More info about labels: https://docs.mobiscroll.com/4-6-1/react/calendar#opt-labels
             display="inline" // Specify display mode like: display="bottom" or omit setting to use default
             type="hidden"
           />
@@ -38,7 +38,7 @@ const Dashboard = props => (
 )
 
 const mapStateToProps = ({ period }) => ({
-  calendarOfFriends: period.calendarOfFriends
+  calendar: period.calendar
 })
 
 export default connect(

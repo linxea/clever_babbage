@@ -1,13 +1,14 @@
-const now = new Date()
+import moment from 'moment'
 
 const initialState = {
   periodLength: 5,
-  periodStartDate: null,
-  calendar: [],
-  calendarOfFriends: [
+  periodStartDate: '2019-02-15',
+  nextPeriodStartDate: null,
+  nextPeriodEndDate: null,
+  calendar: [
     {
-      start: new Date(now.getFullYear(), now.getMonth(), 15),
-      end: new Date(now.getFullYear(), now.getMonth(), 18),
+      start: '2019-03-15T00:00:00.000Z',
+      end: '2019-03-20T00:00:00.000Z',
       text: 'Nicole',
       color: '#f4511e'
     }
@@ -30,15 +31,37 @@ export default (state = initialState, action) => {
       }
 
     case 'FETCHED_PERIOD_PREDICTION':
+      const nextPeriodStartDate = action.nextPeriodStartDate
+      const nextPeriodEndDate = moment(nextPeriodStartDate, 'YYYY-MM-DD')
+        .add(state.periodLength, 'days')
+        .format('YYYY-MM-DD')
+
+      // Update calendar with predicted dates
+      state.calendar = [
+        {
+          start: new Date(nextPeriodStartDate),
+          end: new Date(nextPeriodEndDate),
+          text: 'Nicole',
+          color: '#f4511e'
+        }
+      ]
+
       return {
         ...state,
-        calendar: action.response
+        nextPeriodStartDate: action.nextPeriodStartDate,
+        nextPeriodEndDate
       }
 
     case 'FETCHED_CALENDARS_OF_FRIENDS':
+      // LOL HACK: Do not add duplicate calendars
+      if (state.calendar.length > 1) {
+        return state
+      }
+
+      const calendar = [...state.calendar, ...action.response]
       return {
         ...state,
-        calendarOfFriends: action.response
+        calendar
       }
 
     default:
