@@ -175,3 +175,7 @@ div.ReactTags__selected a.ReactTags__remove {
   margin-left: 5px;
   cursor: pointer;
 }
+
+.label-width {
+  padding-right: 100px;
+}

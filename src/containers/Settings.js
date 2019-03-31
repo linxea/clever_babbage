@@ -12,49 +12,50 @@ import {
 class Settings extends React.Component {
   constructor(props) {
     super(props)
-    this.onClickButton = this.onClickButton.bind(this)
+    this.onChange1 = this.onChange1.bind(this)
+    this.onChange2 = this.onChange2.bind(this)
+    
+    this.state = {
+      switch1: true,
+      switch2: false,
+    };
+  }
+
+  onChange1 = (event) => {
+    this.setState({
+        switch1: event.target.checked
+    });
+}
+
+  onChange2 = (event) => {
+    this.setState({
+        switch2: event.target.checked
+    });
   }
 
   render() {
     return (
       <div className="container question">
-        <h1>When was your last period?</h1>
-        <mobiscroll.Form inputStyle="box" className="container-calendar">
-          <mobiscroll.Date
-            className="input-calendar"
-            display="bubble"
-            placeholder="Start Date"
-            value={this.props.startDate}
-            onSet={this.props.setPeriodStartDate}
-          />
-        </mobiscroll.Form>
-        <h1>How long does your period last?</h1>
-        <label>
-          <mobiscroll.Numpad
-            className="input-period-length"
-            ref="numpad"
-            theme="ios"
-            preset="decimal"
-            scale={0}
-            max={99}
-            min={0}
-            value={this.props.periodLength}
-            onSet={this.props.setPeriodLength}
-          />
-          <span className="label-day">Days</span>
-        </label>
-
-        <button onClick={this.onClickButton}>Done</button>
+        
+        <mobiscroll.FormGroup>
+            <mobiscroll.FormGroupTitle>Proactivity Mode Settings</mobiscroll.FormGroupTitle>
+            <mobiscroll.Switch theme="ios" value={this.state.switch1} onChange={this.onChange1}>
+                Mummy mode
+                <span className="mbsc-desc label-width">This mode turns on Mummy's nagging. Virtual mummy will remind you what you should or should not do to maintain good health.</span>
+            </mobiscroll.Switch>
+            <mobiscroll.Switch theme="ios" value={this.state.switch2} onChange={this.onChange2}>
+                Boyfriend mode
+                <span className="mbsc-desc label-width">This mode turns on the sensitive new age guy 'SNAG' and asks after you before/during the period.</span>
+            </mobiscroll.Switch>
+            <mobiscroll.Switch theme="ios" value={this.state.switch1} onChange={this.onChange1}>
+                Husband mode
+                <span className="mbsc-desc label-width">This mode puts up the 'DND' signal and informs your partner to be more mindful.</span>
+            </mobiscroll.Switch>
+        </mobiscroll.FormGroup>
       </div>
     )
   }
 
-  onClickButton(event) {
-    // send to api
-    // redirect to dashboard
-    this.props.updatePeriodProfile()
-    this.props.history.push('/dashboard')
-  }
 }
 
 const mapStateToProps = ({ period }) => ({
